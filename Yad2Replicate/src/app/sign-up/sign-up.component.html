@@ -1,0 +1,123 @@
+
+<div>
+  <div class="nice-to-meet-container">
+    <img class="profile-img" src="../../assets/icon_signup_profil_plus.svg" alt="profile-pictures">
+  <p class="nice-to-meet">היי, נעים להכיר</p>
+  </div>
+
+<form [formGroup]="signUpForm" (ngSubmit)="handleSubmit()" >
+<!--
+  <div class="user-box">
+  <label for="מייל">מייל</label>
+  <input id="email" type="text" formControlName="email" placeholder="yourail@email.co.il" required="true">
+  <div *ngIf= "!isInputValid(signUpForm, 'email')" class="error-message">
+    המשהו לא תקין במייל, אולי התפספס ה "&#64;"
+  </div>
+</div> -->
+
+<div class="user-box">
+  <label for="email">מייל</label>
+  <!-- <div  class="password-input-container"> -->
+    <div  class="password-input-container">
+
+    <input
+      id="email"
+      type="text"
+      formControlName="email"
+      placeholder="yourmail@email.co.il"
+      required="true"
+      (input)="updaIsFormSubmitted()"
+      [ngClass]="{'invalid-input': !isInputValid(signUpForm, 'email')}"
+
+
+    >
+    <span class="invisibleicon">
+      <i></i>
+    </span>
+  </div>
+  <div *ngIf= "!isInputValid(signUpForm, 'email')" class="error-message">
+    משהו לא תקין במייל, אולי התפספס ה "&#64;"
+  </div>
+</div>
+
+<div class="user-box">
+  <label for="password">סיסמה</label>
+  <div class="password-input-container">
+    <input
+      id="password"
+      [type]="showPassword ? 'text' : 'password'"
+      placeholder="הקלד סיסמה"
+      formControlName="password"
+      (input)="updaIsFormSubmitted()"
+
+    >
+    <span class="eye-icon" (click)="togglePasswordVisibility()">
+      <i [ngClass]="showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'"></i>
+    </span>
+  </div>
+</div>
+
+
+<div class="user-box">
+  <label for="rePassword">אימות סיסמה</label>
+  <div class="password-input-container">
+    <input
+      id="rePassword"
+      [type]="showPassword ? 'text' : 'password'"
+      placeholder="הקלד סיסמה"
+      formControlName="rePassword"
+      (input)="updaIsFormSubmitted()"
+
+
+    >
+    <span class="eye-icon" (click)="togglePasswordVisibility()">
+      <i [ngClass]="showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'"></i>
+    </span>
+
+  </div>
+  <div *ngIf= "!isInputValid(signUpForm, 'rePassword') || !isInputValid(signUpForm, 'password')" class="error-message">
+    נבקש שהסיסמה תכלול אותיות באנגלית וספרות
+  </div>
+</div>
+
+
+<!-- <div class="user-box">
+  <label for="אימות סיסמה">אימות סיסמה</label>
+  <input id="rePassword" type="text"
+  formControlName="rePassword" placeholder="הקלד סיסמה">
+  <div *ngIf= "!isInputValid(signUpForm, 'rePassword') || !isInputValid(signUpForm, 'password')" class="error-message">
+    נבקש שהסיסמה תכלול אותיות באנגלית וספרות
+  </div>
+</div> -->
+
+  <button
+    class="signUp-btn"
+    type="submit"
+    (mouseover)="onMouseOver()"
+    (mouseout)="onMouseOut()"
+    [ngStyle]="{'background-color': buttonColor}"
+    >המשך
+  </button>
+</form>
+
+  <p class="or-login">או התחברו דרך</p>
+  <div class="btn-google-apple">
+    <button>
+      <!-- <img src="./../../assets/google_Icon.svg" alt=""> -->
+      גוגל
+    </button>
+
+    <button>
+      <!-- <img src="./../../assets/apple-Icon.svg" alt=""> -->
+      אפל
+    </button>
+  </div>
+  <p>כבר יש לך חשבון?
+    <a href="">להתחברות</a>
+  </p>
+
+
+</div>
+
+
+

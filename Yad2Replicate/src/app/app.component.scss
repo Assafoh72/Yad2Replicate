@@ -1,0 +1,23 @@
+
+*{
+
+  direction: rtl;
+  font-family: Rubik,sans-serif;
+  font-size: 17px;
+  color: rgb(86, 87, 88);
+
+}
+body {
+}
+// @media (min-width: 880px){
+//   .side-by-side{
+//     display: flex;
+//     gap: 10px;
+//     justify-content: center;
+//   }
+
+// }
+
+.app-signup-login-side{
+  display: none;
+}
