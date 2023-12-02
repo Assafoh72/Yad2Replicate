@@ -1,6 +1,15 @@
   @import '~font-awesome/css/font-awesome.min.css';
   *{
     font-size: medium;
+
+  }
+  .external-container{
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
+    padding: 10px 40px 20px 40px;
+    background: white;
+    margin-right: 25px;
+    max-width: 100%;
+
   }
   .nice-to-meet-container{
     margin-top: 20px;
@@ -8,10 +17,14 @@
     flex-direction: column;
     margin-top: 50px;
 
+
   }
   .profile-img{
     display: flex;
     align-self: center;
+  }
+  .logo-img{
+    display: none;
   }
   .nice-to-meet{
     font-size: 26px;
@@ -65,15 +78,18 @@
       font-size: medium;
   }
 
-  input:hover {
-    outline: 1px solid rgb(36, 34, 34);
-  }
+  // input:hover {
+  //   outline: 1px solid rgb(36, 34, 34);
+  // }
 
 
 
   .invalid-input{
     outline: 1px solid   rgb(243, 9, 9);
   }
+  // .invalid-input :hover{
+  //   outline: 1px solid   rgb(243, 9, 9);
+  // }
 
   .password-input-container {
     display: flex;
@@ -110,6 +126,25 @@
     color: #ff7100;
     font-weight: bold;
   }
+
+  @media (min-width:880px) {
+    .profile-img{
+      display: none;
+    }
+    .logo-img{
+      display: block;
+      padding: 60px 0px;
+    }
+
+    // .external-container{
+    //   box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
+    //   padding: 10px 40px 20px 40px;
+    //   background: white;
+    //   margin-right: 25px;
+
+    // }
+  }
+
 
 
 

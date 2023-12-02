@@ -1,19 +1,11 @@
-
-<div>
+<img class="logo-img" src="../assets/download.png" alt="">
+<div class="external-container">
   <div class="nice-to-meet-container">
     <img class="profile-img" src="../../assets/icon_signup_profil_plus.svg" alt="profile-pictures">
   <p class="nice-to-meet">היי, נעים להכיר</p>
   </div>
 
 <form [formGroup]="signUpForm" (ngSubmit)="handleSubmit()" >
-<!--
-  <div class="user-box">
-  <label for="מייל">מייל</label>
-  <input id="email" type="text" formControlName="email" placeholder="yourail@email.co.il" required="true">
-  <div *ngIf= "!isInputValid(signUpForm, 'email')" class="error-message">
-    המשהו לא תקין במייל, אולי התפספס ה "&#64;"
-  </div>
-</div> -->
 
 <div class="user-box">
   <label for="email">מייל</label>
@@ -99,6 +91,8 @@
     >המשך
   </button>
 </form>
+
+
 
   <p class="or-login">או התחברו דרך</p>
   <div class="btn-google-apple">

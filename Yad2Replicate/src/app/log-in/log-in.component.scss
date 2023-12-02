@@ -1,0 +1,148 @@
+@import '~font-awesome/css/font-awesome.min.css';
+*{
+  font-size: medium;
+
+}
+.external-container{
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
+  padding: 10px 40px 20px 40px;
+  background: white;
+  margin-right: 25px;
+  max-width: 100%;
+
+}
+.nice-to-meet-container{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+
+
+}
+.profile-img{
+  display: flex;
+  align-self: center;
+}
+.logo-img{
+  display: none;
+}
+.nice-to-meet{
+  font-size: 26px;
+  color: inherit;
+}
+p{
+  text-align: center;
+}
+form{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  gap: 20px;
+}
+form label{
+  padding: 7px;
+}
+.user-box{
+  display: flex;
+  flex-direction: column;
+}
+
+button{
+  border-radius: 35px;
+  height: 40px;
+}
+.signUp-btn{
+  width: 100%;
+  border-radius: 35px;
+  // background-color: #ff7100;
+  border: none;
+  color: white;
+  height: 50px;
+}
+
+.error-message{
+  color: red;
+}
+// img{
+//   max-height: 25px;
+//   max-width: 15px;
+// }
+input{
+    border: 1px solid   rgb(172, 161, 161);
+    border-radius: 5px;
+    padding: 10px 15px 10px 35px;
+    width: 95%;
+    margin-right: 6px;
+    height: 32px;
+    font-size: medium;
+}
+
+// input:hover {
+//   outline: 1px solid rgb(36, 34, 34);
+// }
+
+
+
+.invalid-input{
+  outline: 1px solid   rgb(243, 9, 9);
+}
+// .invalid-input :hover{
+//   outline: 1px solid   rgb(243, 9, 9);
+// }
+
+.password-input-container {
+  display: flex;
+  align-items: center;
+  position: relative; // Uncommented position: relative;
+}
+
+
+.eye-icon {
+  position: absolute;
+  left: 10px; // Adjusted left position based on your preference
+  cursor: pointer;
+}
+.invisibleicon{
+  position: absolute;
+  left: 10px; // Adjusted left position based on your preference
+  cursor: pointer;
+  opacity: 0;
+}
+
+.btn-google-apple{
+  display: flex;
+  gap: 15px;
+
+}
+.btn-google-apple button{
+  width: 49%;
+  background-color: white;
+  border: 1px solid   rgb(172, 161, 161);
+  height: 50px;
+}
+
+a{
+  color: #ff7100;
+  font-weight: bold;
+}
+
+@media (min-width:880px) {
+  .profile-img{
+    display: none;
+  }
+  .logo-img{
+    display: block;
+    padding: 60px 0px;
+  }
+
+ 
+}
+
+
+
+
+
+
+
+
