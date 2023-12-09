@@ -41,6 +41,26 @@
 .hamburger-items{
   display: none;
 }
+.left-side{
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+}
+.bell{
+  width: 18px;
+  height: 20px;
+  padding-top: 2px;
+}
+.heart{
+   width: 31px;
+  height: 31px;
+}
+.user{
+   width: 38px;
+  height: 36px;
+  padding-bottom: 5px;
+}
 
 .new-add-btn{
     height: 41px;
@@ -86,6 +106,9 @@
   }
   .hamburger-items{
     display: block;
+  }
+  .manu{
+    display: none;
   }
 }
 

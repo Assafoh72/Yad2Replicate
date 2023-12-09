@@ -1,0 +1,47 @@
+
+<div class="external-container">
+  <!-- <div class="container"> -->
+    <div class="first-container">
+        <p>
+          איזה נכס ל
+          <a href="">מכירה</a>
+            תרצו לחפש?
+        </p>
+      <button class="phone-notificatin-ctn">
+        קבלו התראות במייל על החיפוש
+      </button>
+    <!-- </div> -->
+  </div>
+
+  <form [formGroup]="searchForm" (ngSubmit)="handelSubmit()">
+    <div class="asset-info">
+      <label for="">חפשו אזור, עיר, שכונה או רחוב</label>
+      <input
+      id="area"
+      type="text"
+      formControlName="area"
+      placeholder="לדוגמה: תל אביב יפו"
+      required=""
+      >
+    </div>
+
+    <div class="asset-info">
+      <label for="">סוג נכס</label>
+      <input
+      id="assetType"
+      formControlName="assetType"
+      placeholder="לדוגמה: תל אביב יפו"
+      required=""
+      list="browsers"
+      >
+    </div>
+
+
+  </form>
+
+
+</div>
+
+
+
+

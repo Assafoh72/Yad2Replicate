@@ -4,12 +4,19 @@
   font-size: 17px;
   color: rgb(86, 87, 88);
 }
-body {
-}
+
 
 .app-signup-login-side{
   display: none;
 }
+
+// .search-bar{
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+
+// }
 
 @media (min-width: 880px){
   *{
@@ -27,6 +34,7 @@ body {
   .app-signup-login-side{
     display: flex;
   }
+
 
 
 }

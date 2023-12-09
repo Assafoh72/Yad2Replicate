@@ -1,0 +1,30 @@
+*{
+  direction: rtl;
+}
+
+mat-form-filed{
+  width: 300px;
+}
+
+.drop-down-property-typs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-margin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.drop-down-property-typs-inner{
+  background: yellowgreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+

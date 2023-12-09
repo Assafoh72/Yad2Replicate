@@ -1,0 +1,23 @@
+.external-container{
+  max-width: 1100px;
+  min-height: 300px;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,.1);
+
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+
+}
+.first-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p{
+    font-weight: bold;
+
+    a{
+      color: #ff7100;
+    }
+  }
+}

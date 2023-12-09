@@ -1,0 +1,89 @@
+<section class="example-section">
+  <mat-checkbox class="example-margin"
+                [checked]="allAppartmentComplete || allHomeComplete || allOtherComplete"
+                [indeterminate]="someComplete()"
+                (change)="setAll($event.checked)">
+    כל סוגי הנכסים
+  </mat-checkbox>
+</section>
+<!-- appartment -->
+<section class="example-section">
+  <span class="example-list-section">
+    <mat-checkbox class="example-margin"
+                  [checked]="allAppartmentComplete"
+                  [color]="appartment.color"
+                  [indeterminate]="someAppartmentComplete()"
+                  (change)="setAllAppartment($event.checked)">
+      {{appartment.name}}
+    </mat-checkbox>
+  </span>
+  <span class="example-list-section">
+    <ul>
+
+        <li *ngFor ="let subtask of appartment.subtasks; track subtask">
+          <mat-checkbox [(ngModel)]="subtask.completed"
+                        [color]="subtask.color"
+                        (ngModelChange)="updateAllAppartmentComplete()">
+            {{subtask.name}}
+          </mat-checkbox>
+        </li>
+
+    </ul>
+  </span>
+</section>
+
+<!-- home -->
+
+<section class="example-section">
+  <span class="example-list-section">
+    <mat-checkbox class="example-margin"
+                  [checked]="allHomeComplete"
+                  [color]="home.color"
+                  [indeterminate]="someHomeComplete()"
+                  (change)="setAllHome($event.checked)">
+      {{home.name}}
+    </mat-checkbox>
+  </span>
+  <span class="example-list-section">
+    <ul>
+
+        <li *ngFor ="let subtask of home.subtasks; track subtask">
+          <mat-checkbox [(ngModel)]="subtask.completed"
+                        [color]="subtask.color"
+                        (ngModelChange)="updateAllHomeComplete()">
+            {{subtask.name}}
+          </mat-checkbox>
+        </li>
+
+    </ul>
+  </span>
+</section>
+
+
+<!-- other -->
+
+<section class="example-section">
+  <span class="example-list-section">
+    <mat-checkbox class="example-margin"
+                  [checked]="allOtherComplete"
+                  [color]="other.color"
+                  [indeterminate]="someOtherComplete()"
+                  (change)="setAllOther($event.checked)">
+      {{other.name}}
+    </mat-checkbox>
+  </span>
+  <span class="example-list-section">
+    <ul>
+
+        <li *ngFor ="let subtask of other.subtasks; track subtask">
+          <mat-checkbox [(ngModel)]="subtask.completed"
+                        [color]="subtask.color"
+                        (ngModelChange)="updateAllOtherComplete()">
+            {{subtask.name}}
+          </mat-checkbox>
+        </li>
+
+    </ul>
+  </span>
+</section>
+
