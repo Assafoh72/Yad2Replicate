@@ -26,16 +26,21 @@
     </div>
 
     <div class="asset-info">
-      <label for="">סוג נכס</label>
-      <input
-      id="assetType"
-      formControlName="assetType"
-      placeholder="לדוגמה: תל אביב יפו"
-      required=""
-      list="browsers"
-      >
+      <label for="">סוג נכס
+
+      </label>
+
+      <app-input-with-icon
+        (click) = "updateIsDropdown()"
+        [isOpenArrowIcon]="IsDropdown"
+      ></app-input-with-icon>
+      <div [ngClass]="{ 'drop-down-property-types-show': IsDropdown, 'drop-down-property-types-hide': !IsDropdown }">
+        <app-drop-down-property-types></app-drop-down-property-types>
+      </div>
     </div>
 
+    <app-input-rooms-number></app-input-rooms-number>
+    <app-input-price></app-input-price>
 
   </form>
 

@@ -21,3 +21,17 @@
     }
   }
 }
+.asset-info{
+  display: flex;
+  flex-direction: column;
+}
+form{
+  display: flex;
+  gap: 10px;
+}
+
+.drop-down-property-types-hide{
+  display: none;
+}
+.drop-down-property-types-show{
+}

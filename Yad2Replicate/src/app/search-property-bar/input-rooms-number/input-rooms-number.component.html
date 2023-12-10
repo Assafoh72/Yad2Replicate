@@ -1,0 +1,62 @@
+<!-- <div class="external-container">
+  <label for="">חדרים</label>
+  <button (click)="updateIsDropDownOpen()">חדרים
+    <mat-icon *ngIf= "isFirstDropDownOpen">keyboard_arrow_down</mat-icon>
+    <mat-icon *ngIf= "!isFirstDropDownOpen">keyboard_arrow_up</mat-icon>
+  </button>
+  <div class = "from-to-container">
+    <div>
+      <button (click)="updateIsFromDownOpen()">מ-{{(fromValue==0?"":fromValue)}}
+        <mat-icon *ngIf= "isFromDropDownOpen">keyboard_arrow_down</mat-icon>
+        <mat-icon *ngIf= "!isFromDropDownOpen">keyboard_arrow_up</mat-icon>
+      </button>
+      <div class="scroll-container">
+        <div class="options" *ngFor="let option of optionsFrom">{{ option }}</div>
+      </div>
+    </div>
+    <div>
+      <button (click)="updateIsToDropDownOpen()">עד-{{(toValue==0?"":toValue)}}
+        <mat-icon *ngIf= "isToDropDownOpen">keyboard_arrow_down</mat-icon>
+        <mat-icon *ngIf= "!isToDropDownOpen">keyboard_arrow_up</mat-icon>
+      </button>
+      <div class="scroll-container">
+        <div class="options" *ngFor="let option of optionsTo">
+          {{ option }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div> -->
+
+<div class="external-container">
+  <label for="">חדרים</label>
+  <button (click)="updateIsDropDownOpen()">חדרים
+    <mat-icon *ngIf="isFirstDropDownOpen">keyboard_arrow_down</mat-icon>
+    <mat-icon *ngIf="!isFirstDropDownOpen">keyboard_arrow_up</mat-icon>
+  </button>
+  <div class="from-to-container" *ngIf="isFirstDropDownOpen">
+    <div>
+      <button (click)="updateIsFromDownOpen()">מ-{{ (fromValue === 0 ? '' : fromValue) }}
+        <mat-icon *ngIf="isFromDropDownOpen">keyboard_arrow_down</mat-icon>
+        <mat-icon *ngIf="!isFromDropDownOpen">keyboard_arrow_up</mat-icon>
+      </button>
+      <div class="scroll-container" *ngIf="isFromDropDownOpen">
+        <div class="options" *ngFor="let option of optionsFrom" (click)="updateFromValue(option)">
+          {{ option }}
+        </div>
+      </div>
+    </div>
+    <div>
+      <button (click)="updateIsToDropDownOpen()">עד-{{ (toValue === 0 ? '' : toValue) }}
+        <mat-icon *ngIf="isToDropDownOpen">keyboard_arrow_down</mat-icon>
+        <mat-icon *ngIf="!isToDropDownOpen">keyboard_arrow_up</mat-icon>
+      </button>
+      <div class="scroll-container"  *ngIf="isToDropDownOpen">
+        <div class="options" *ngFor="let option of optionsTo" (click)="updateToValue(option)">
+          {{ option }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
