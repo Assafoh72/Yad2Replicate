@@ -20,6 +20,8 @@ import { InputWithIconComponent } from './search-property-bar/input-with-icon/in
 import { InputFromToDropDownComponent } from './search-property-bar/input-from-to-drop-down/input-from-to-drop-down.component';
 import { InputRoomsNumberComponent } from './search-property-bar/input-rooms-number/input-rooms-number.component';
 import { InputPriceComponent } from './search-property-bar/input-price/input-price.component';
+import { AddvenceSearchButtonComponent } from './search-property-bar/addvence-search-button/addvence-search-button.component';
+import { SearchProprertyButtonComponent } from './search-property-bar/search-proprerty-button/search-proprerty-button.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { InputPriceComponent } from './search-property-bar/input-price/input-pri
     InputWithIconComponent,
     InputFromToDropDownComponent,
     InputRoomsNumberComponent,
-    InputPriceComponent
+    InputPriceComponent,
+    AddvenceSearchButtonComponent,
+    SearchProprertyButtonComponent
   ],
   imports: [
     BrowserModule,

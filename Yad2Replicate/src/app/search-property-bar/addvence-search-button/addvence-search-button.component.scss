@@ -1,0 +1,23 @@
+.external-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px;
+  border-radius: 5px;
+  background-color: rgb(223, 223, 223);
+  display: flex;
+  width: 130px;
+  height: 40px;
+}
+.open{
+  transform: rotate(45deg);
+  transition-duration: 1s;
+}
+.close{
+  transition-duration: 1s;
+}
+button{
+  border: none;
+   text-decoration: none;
+   background: none;
+}

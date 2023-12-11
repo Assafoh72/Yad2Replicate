@@ -29,6 +29,8 @@ export class SearchBarComponent {
     this.IsDropdown=!this.IsDropdown
     console.log("IsDropdown" +  this.IsDropdown);
   }
+  priceLable : string = "מחיר";
+  
 
 
 

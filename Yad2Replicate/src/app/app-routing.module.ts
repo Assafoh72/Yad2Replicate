@@ -8,11 +8,11 @@ import { MaterialComponent } from './material/material.component';
 
 
 const routes: Routes = [
-{path: '', component: MaterialComponent},
+{path: '', component: SearchBarComponent},
 {path:'header', component: HeaderComponent},
 {path: 'signUp', component: SignUpComponent},
 {path: 'login', component: LogInComponent},
-{path: 'main', component: SearchBarComponent}
+// {path: 'main', component: SearchBarComponent}
 ];
 
 @NgModule({

@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./input-price.component.scss']
 })
 export class InputPriceComponent {
-
+  @Input() lableInput: string = "";
 }
