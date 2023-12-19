@@ -22,6 +22,10 @@ import { InputRoomsNumberComponent } from './search-property-bar/input-rooms-num
 import { InputPriceComponent } from './search-property-bar/input-price/input-price.component';
 import { AddvenceSearchButtonComponent } from './search-property-bar/addvence-search-button/addvence-search-button.component';
 import { SearchProprertyButtonComponent } from './search-property-bar/search-proprerty-button/search-proprerty-button.component';
+import { DatabaseComponent } from './database/database.component';
+import { HttpClientModule } from '@angular/common/http';
+import { Yad2ApiService } from './services/yad2-api.service';
+import { AsssetCardComponent } from './assset-card/assset-card.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,9 @@ import { SearchProprertyButtonComponent } from './search-property-bar/search-pro
     InputRoomsNumberComponent,
     InputPriceComponent,
     AddvenceSearchButtonComponent,
-    SearchProprertyButtonComponent
+    SearchProprertyButtonComponent,
+    DatabaseComponent,
+    AsssetCardComponent
   ],
   imports: [
     BrowserModule,
@@ -49,9 +55,10 @@ import { SearchProprertyButtonComponent } from './search-property-bar/search-pro
     MaterialModule,
     AppRoutingModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [Yad2ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

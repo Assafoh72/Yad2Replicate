@@ -30,7 +30,7 @@ export class SearchBarComponent {
     console.log("IsDropdown" +  this.IsDropdown);
   }
   priceLable : string = "מחיר";
-  
+
 
 
 

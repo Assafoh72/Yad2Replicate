@@ -1,0 +1,119 @@
+<div class="all-appartment-container">
+  <div *ngFor="let item of assets">
+    <div class="external-container">
+
+      <div>
+        <img src="../../assets/appartment pictures/WhatsApp Image 2023-12-19 at 17.07.49.jpeg" alt="appartment-pic">
+      </div>
+
+      <div>
+        <div>
+          <p>{{item.price}}</p>
+          <p>{{item.street}} {{item.streetNumber}}</p>
+          <p>{{item.type}},{{item.neighborhood}},{{item.city}}</p>
+        </div>
+
+
+        <div class="button-container">
+          <div>
+            <p>{{item.roomsNumber}}</p>
+            <label for="">חדרים</label>
+
+          </div>
+          <div>
+            <p>{{item.floor}}</p>
+            <label for="">קומה</label>
+
+          </div>
+          <div>
+            <p>{{item.totalSquareFootage}}</p>
+            <label for="">מ"ר</label>
+
+          </div>
+
+
+
+
+        </div>
+      </div>
+
+
+
+      <!-- <p>ממ"ד: {{item.hasMamad?"כן" : "לא"}}</p>
+      <p>מצב הנכס: {{item.propertyCondition}}</p>
+      <p>תאריך כניסה: {{item.entryDate}}</p>
+      <p>גודל גינה: {{item.gardenSquare}}</p>
+      <p>גודל בנוי: {{item.builtSquare}}</p>
+      <p>חניות: {{item.parkingLots}}</p>
+      <p>מזגן תדיראן: {{item.hasCentralAirConditioning}}</p>
+      <p>דוד שמש: {{item.hasSolarHeater}}</p>
+      <p>מחסן: {{item.Id}}</p>
+      <p>גמיש בכניסה: {{item.Id}}</p>
+      <p>סורגים: {{item.Id}}</p>
+      <p>נגישות לנכים: {{item.hasAccessibilityForDisabled}}</p>
+      <p>מעלית: {{item.hasElevator}}</p> -->
+
+
+    </div>
+  </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+<!-- <div>
+  <div *ngFor="let item of assets">
+    <div class="external-container">
+      <div>
+        <img src="" alt="">
+      </div>
+      <div>
+        <p>מחיר: {{item.price}}</p>
+        <p>רחוב: {{item.street}}</p>
+        <p>מספר בית: {{item.streetNumber}}</p>
+        <p>שכונה: {{item.neighborhood}}</p>
+        <p>עיר: {{item.city}}</p>
+      </div>
+      <div>
+        <p>קומה: {{item.floor}}</p>
+        <p> מ"ר: {{item.totalSquareFootage}}</p>
+      </div>
+      <div>
+
+      </div>
+
+
+      <p>תיאור: {{item.des}}</p>
+      <p>ממ"ד: {{item.hasMamad?"כן" : "לא"}}</p>
+      <p>מצב הנכס: {{item.propertyCondition}}</p>
+      <p>תאריך כניסה: {{item.entryDate}}</p>
+      <p>גודל גינה: {{item.gardenSquare}}</p>
+      <p>גודל בנוי: {{item.builtSquare}}</p>
+      <p>חניות: {{item.parkingLots}}</p>
+      <p>מזגן תדיראן: {{item.hasCentralAirConditioning}}</p>
+      <p>דוד שמש: {{item.hasSolarHeater}}</p>
+      <p>מחסן: {{item.Id}}</p>
+      <p>גמיש בכניסה: {{item.Id}}</p>
+      <p>סורגים: {{item.Id}}</p>
+      <p>נגישות לנכים: {{item.hasAccessibilityForDisabled}}</p>
+      <p>מעלית: {{item.hasElevator}}</p>
+
+
+    </div>
+  </div>
+
+
+  </div>
+
+
+
+
+ -->
