@@ -10,3 +10,35 @@ ul {
   list-style-type: none;
   margin-top: 4px;
 }
+
+::ng-deep {
+  .mat-checkbox-frame,
+  .mat-checkbox-background,
+  .mat-checkbox-checkmark,
+  .mat-checkbox-mixedmark {
+    border-color: black !important;
+    background-color: black !important;
+  }
+
+  .mat-checkbox-background {
+    // For the checkmark color
+    .mat-checkbox-checkmark-path {
+      stroke: white !important;
+    }
+
+    // For the indeterminate checkbox color
+    &::after {
+      background-color: white !important;
+    }
+  }
+
+  .mat-accent .mat-checkbox-checked.mat-accent .mat-checkbox-background,
+  .mat-accent .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    color: black !important;
+  }
+
+  .mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element {
+    background-color: rgba(0, 0, 0, 0.26);
+  }
+}
+

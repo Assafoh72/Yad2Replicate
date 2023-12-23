@@ -10,11 +10,17 @@ import { Asset } from '../data/asset.interfaces';
 })
 export class AsssetCardComponent implements OnInit {
   assets: Asset[] = [];
-
+  
   constructor(private assetService: AssetService) {}
 
   ngOnInit(): void {
     this.assets = this.assetService.getAsset();
+
   }
+
+  numberWithCommas(price: number) {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 
 }

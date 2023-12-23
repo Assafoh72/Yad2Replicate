@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 import {ThemePalette} from '@angular/material/core';
 import {FormsModule} from '@angular/forms';
@@ -15,7 +15,9 @@ export interface AssetsCheckbox {
 @Component({
   selector: 'app-drop-down-property-types',
   templateUrl: './drop-down-property-types.component.html',
-  styleUrls: ['./drop-down-property-types.component.scss']
+  styleUrls: ['./drop-down-property-types.component.scss'],
+  encapsulation: ViewEncapsulation.None // Add this line
+
 })
 export class DropDownPropertyTypesComponent {
 
@@ -35,6 +37,7 @@ export class DropDownPropertyTypesComponent {
         {name: 'סטודיו\לופט', completed: false, color: 'warn'},
     ],
   };
+
 
   home: AssetsCheckbox = {
     name: 'בתים',

@@ -26,6 +26,8 @@ import { DatabaseComponent } from './database/database.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Yad2ApiService } from './services/yad2-api.service';
 import { AsssetCardComponent } from './assset-card/assset-card.component';
+import { DropDownAssetTypeComponent } from './search-property-bar/drop-down-asset-type/drop-down-asset-type.component';
+import { InputFromToComponent } from './search-property-bar/input-from-to/input-from-to.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { AsssetCardComponent } from './assset-card/assset-card.component';
     AddvenceSearchButtonComponent,
     SearchProprertyButtonComponent,
     DatabaseComponent,
-    AsssetCardComponent
+    AsssetCardComponent,
+    DropDownAssetTypeComponent,
+    InputFromToComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+.external-container{
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+
+}
+.from-to-container{
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+}
+
+
+input{
+  all: unset;
+  width: 90px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 24px;
+}
+

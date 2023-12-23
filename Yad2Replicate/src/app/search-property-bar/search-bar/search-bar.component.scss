@@ -21,13 +21,51 @@
     }
   }
 }
-.asset-info{
-  display: flex;
-  flex-direction: column;
+// .asset-info{
+//   display: flex;
+//   flex-direction: column;
+// }
+
+//
+
+.asset-info {
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  text-align: right;
 }
+
+.asset-info label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.asset-info input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.asset-info input[type="text"]::placeholder {
+  color: #888;
+}
+
+
+//
+
+
+
+
+
 form{
   display: flex;
-  gap: 10px;
+  gap: 1px;
+  justify-content: space-around;
+  align-items: flex-start;
+
 }
 
 .drop-down-property-types-hide{

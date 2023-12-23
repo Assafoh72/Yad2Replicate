@@ -1,0 +1,46 @@
+
+.external-container{
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+.from-to-container{
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  gap: 5px;
+}
+
+
+.scroll-container {
+  height: 200px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.options {
+  padding: 5px;
+  margin-bottom: 5px;
+  border:none;
+  background-color: #f9f9f9;
+}
+.options:hover{
+  background-color: gray;
+}
+
+button{
+  all: unset;
+
+  width: 70px;
+  background-color: none;
+  width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+
+
+
+}

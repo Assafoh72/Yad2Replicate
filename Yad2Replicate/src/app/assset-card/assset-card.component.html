@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
 <div class="all-appartment-container">
   <div *ngFor="let item of assets">
     <div class="external-container">
@@ -6,40 +9,83 @@
         <img src="../../assets/appartment pictures/WhatsApp Image 2023-12-19 at 17.07.49.jpeg" alt="appartment-pic">
       </div>
 
-      <div>
+      <div class="property-details-container">
         <div>
-          <p>{{item.price}}</p>
+          <p class="price-small-screen">{{numberWithCommas(item.price)}} <span>&#8362;</span>
+          </p>
           <p>{{item.street}} {{item.streetNumber}}</p>
-          <p>{{item.type}},{{item.neighborhood}},{{item.city}}</p>
+          <p class="p-addres">{{item.type}},{{item.neighborhood}},{{item.city}}</p>
         </div>
+
+        <hr class="custom-hr" />
 
 
         <div class="button-container">
-          <div>
+          <div class="p-lable">
             <p>{{item.roomsNumber}}</p>
             <label for="">חדרים</label>
 
           </div>
-          <div>
+          <div class="p-lable">
             <p>{{item.floor}}</p>
             <label for="">קומה</label>
 
           </div>
-          <div>
+          <div class="p-lable">
             <p>{{item.totalSquareFootage}}</p>
             <label for="">מ"ר</label>
 
           </div>
 
+        </div>
 
-
+        <div>
+          <p class="price-big-screen">{{numberWithCommas(item.price)}} <span>&#8362;</span>
 
         </div>
+
       </div>
+    </div>
+
+
+    <div class="slide-down-container">
+
+      <i class="fas fa-snowflake"></i>
+      <i class="fas fa-wind"></i>
+
+<!-- Parking -->
+<i class="fas fa-parking"></i>
+
+<!-- Elevator -->
+<i class="fas fa-sort-numeric-up"></i>
+
+<!-- Balcony -->
+<i class="fas fa-th-large"></i>
+
+<!-- Furniture -->
+<i class="fas fa-couch"></i>
+
+<!-- Accessibility -->
+<i class="fas fa-wheelchair"></i>
+
+<!-- Heating -->
+<i class="fas fa-thermometer-three-quarters"></i>
+
+<!-- Security -->
+<i class="fas fa-lock"></i>
+
+<!-- Pool -->
+<i class="fas fa-swimming-pool"></i>
+
+<!-- Pets Allowed -->
+<i class="fas fa-paw"></i>
 
 
 
-      <!-- <p>ממ"ד: {{item.hasMamad?"כן" : "לא"}}</p>
+
+
+
+      <p>ממ"ד: {{item.hasMamad?"כן" : "לא"}}</p>
       <p>מצב הנכס: {{item.propertyCondition}}</p>
       <p>תאריך כניסה: {{item.entryDate}}</p>
       <p>גודל גינה: {{item.gardenSquare}}</p>
@@ -51,8 +97,21 @@
       <p>גמיש בכניסה: {{item.Id}}</p>
       <p>סורגים: {{item.Id}}</p>
       <p>נגישות לנכים: {{item.hasAccessibilityForDisabled}}</p>
-      <p>מעלית: {{item.hasElevator}}</p> -->
+      <p>מעלית: {{item.hasElevator}}</p>
 
+      <p>ממ"ד: {{item.hasMamad?"כן" : "לא"}}</p>
+      <p>מצב הנכס: {{item.propertyCondition}}</p>
+      <p>תאריך כניסה: {{item.entryDate}}</p>
+      <p>גודל גינה: {{item.gardenSquare}}</p>
+      <p>גודל בנוי: {{item.builtSquare}}</p>
+      <p>חניות: {{item.parkingLots}}</p>
+      <p>מזגן תדיראן: {{item.hasCentralAirConditioning}}</p>
+      <p>דוד שמש: {{item.hasSolarHeater}}</p>
+      <p>מחסן: {{item.Id}}</p>
+      <p>גמיש בכניסה: {{item.Id}}</p>
+      <p>סורגים: {{item.Id}}</p>
+      <p>נגישות לנכים: {{item.hasAccessibilityForDisabled}}</p>
+      <p>מעלית: {{item.hasElevator}}</p>
 
     </div>
   </div>

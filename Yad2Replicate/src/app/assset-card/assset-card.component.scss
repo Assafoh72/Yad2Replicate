@@ -1,3 +1,6 @@
+*{
+  font-size: 0.8rem;
+}
 .all-appartment-container{
   display: flex;
   flex-direction: column;
@@ -6,25 +9,91 @@
 }
 .external-container{
   width: 600px;
-  height: 180px;
-  background-color: aquamarine;
-  display: flex;
+  height: 120px;
+  background-color: #f7dc99;
+    display: flex;
+    gap: 15px;
+
 
 }
+
+.property-details-container{
+  width: 90%;
+  padding: 10px;
+  p{
+    margin: 0px;
+  }
+  .p-addres{
+    font-size: 0.8rem;
+  }
+  .price-small-screen{
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+.price-big-screen{
+  display: none;
+}
+
 img{
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
+  margin: 3px;
+  border-radius: 3px;
+
 }
 .button-container{
   display: flex;
-  justify-content: space-between ;
-  
+  justify-content: space-around;
+}
+.p-lable{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p{
+    margin: 0px;
+  }
 
+}
+.custom-hr{
+  border: none; /* Removes the default border */
+  height: 0.5px; /* Thickness of the horizontal line */
+  background-color: rgb(172, 172, 172); /* Color of the horizontal line */
+  margin: 0; /* Adjust margins as needed */
+}
+p{
+  font-size: 1rem;
 
 }
 
+@media (min-width:880px) {
+  // .external-container{
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  // }
+  .property-details-container{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+
+  }
+  .price-small-screen{
+    display: none;
+  }
+  .price-big-screen{
+    display: block;
+  }
+  .button-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+  }
+  .custom-hr{
+    display: none;
+  }
 
 
-
-
-
+}

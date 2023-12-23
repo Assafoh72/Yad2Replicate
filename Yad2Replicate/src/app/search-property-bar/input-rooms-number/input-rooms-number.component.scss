@@ -1,6 +1,9 @@
 .external-container{
   display: flex;
   flex-direction: column;
+  width: 130px;
+  height: 40px;
+
 }
 .from-to-container{
   display: flex;
@@ -22,4 +25,20 @@
 }
 .options:hover{
   background-color: gray;
+}
+
+button{
+  all: unset;
+  width: 90px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.second-btn{
+  width: 65px;
+  margin-bottom: 12px;
 }

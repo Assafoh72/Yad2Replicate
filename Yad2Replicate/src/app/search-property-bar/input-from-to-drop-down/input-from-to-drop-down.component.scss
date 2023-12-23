@@ -1,18 +1,74 @@
-.external-container{
+// .external-container{
+//   display: flex;
+//   flex-direction: column;
+// }
+// .container-options{
+//   display: flex;
+//   flex-direction: row;
+//   background-color: aqua;
+// }
+
+// .inside-container{
+//   display: flex;
+// }
+
+// mat-select{
+//   width: 50%;
+// }
+
+
+.external-container {
   display: flex;
   flex-direction: column;
-}
-.container-options{
-  display: flex;
-  flex-direction: row;
-  background-color: aqua;
+  width: 300px; /* Adjust as needed */
+  font-family: Arial, sans-serif; /* Use your desired font */
+  position: relative; /* For absolute positioning inside */
 }
 
-.inside-container{
+.container-options {
   display: flex;
+  justify-content: space-between; /* To create space between the dropdowns */
+  background-color: #f0f0f0; /* Adjust color to match your design */
+  padding: 10px; /* Spacing around the dropdowns */
+  border-radius: 8px; /* Rounded corners */
 }
 
-mat-select{
-  width: 50%;
+.inside-container {
+  display: flex;
+  flex-direction: column; /* Align label on top of select */
+  align-items: flex-start; /* Align items to the start */
 }
+
+mat-form-field {
+  width: 100%; /* Make the form field full width */
+  position: absolute; /* To layer the label above the dropdowns */
+  pointer-events: none; /* To allow clicks to pass through */
+}
+
+mat-label {
+  position: absolute;
+  top: -20px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  background-color: #f0f0f0; /* Match the container background */
+  padding: 0 5px; /* Some padding on the sides */
+  font-size: 0.85em; /* Smaller font size for the label */
+}
+
+mat-select {
+  width: 100%; /* Make the select full width */
+  margin-top: 20px; /* Space for the label */
+}
+
+/* Styles for the mat-option component */
+mat-option {
+  font-size: 0.85em; /* Match the font size of the label */
+}
+
+/* Optional: add a border or box-shadow to the external container */
+.external-container {
+  border: 1px solid #ccc; /* Light grey border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* If using Angular Material, you may need to increase specificity or use ::ng-deep to override default styles */
 

@@ -1,0 +1,26 @@
+<!-- <section class="example-section">
+  <div class="example-margin">
+    <input type="checkbox"
+           id="allTypes"
+           (change)="setAll($event.target.checked)">
+    <label for="allTypes">כל סוגי הנכסים</label>
+  </div>
+</section>
+<section class="example-section">
+  <div class="example-margin">
+    <input type="checkbox"
+           id="allApartments"
+           (change)="setAllAppartment($event.target.)">
+    <label for="allApartments">{{ appartment.name }}</label>
+  </div>
+  <ul>
+    <li *ngFor="let subtask of appartment.subtasks; let i = index">
+      <input type="checkbox"
+             id="{{ 'apartment-' + i }}"
+             [(ngModel)]="subtask.completed"
+             (change)="updateAllAppartmentComplete()">
+      <label for="{{ 'apartment-' + i }}">{{ subtask.name }}</label>
+    </li>
+  </ul>
+</section>
+Repeat for home and other sections -->

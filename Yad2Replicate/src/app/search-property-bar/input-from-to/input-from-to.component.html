@@ -1,0 +1,32 @@
+
+<div class="external-container">
+  <label for="">חדרים</label>
+  <button (click)="updateIsDropDownOpen()">חדרים
+    <mat-icon>keyboard_arrow_down</mat-icon>
+
+  </button>
+  <div class="from-to-container" *ngIf="isFirstDropDownOpen">
+    <div>
+      <button (click)="updateIsFromDownOpen()">מ-{{ (fromValue === 0 ? '' : fromValue) }}
+
+      </button>
+      <div class="scroll-container" *ngIf="isFromDropDownOpen">
+        <div class="options" *ngFor="let option of optionsFrom" (click)="updateFromValue(option)">
+          {{ option }}
+        </div>
+      </div>
+    </div>
+    <div>
+
+      <button (click)="updateIsToDropDownOpen()">עד-{{ (toValue === 0 ? '' : toValue) }}
+
+      </button>
+      <div class="scroll-container"  *ngIf="isToDropDownOpen">
+        <div class="options" *ngFor="let option of optionsTo" (click)="updateToValue(option)">
+          {{ option }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
