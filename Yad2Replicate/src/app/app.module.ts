@@ -28,6 +28,7 @@ import { Yad2ApiService } from './services/yad2-api.service';
 import { AsssetCardComponent } from './assset-card/assset-card.component';
 import { DropDownAssetTypeComponent } from './search-property-bar/drop-down-asset-type/drop-down-asset-type.component';
 import { InputFromToComponent } from './search-property-bar/input-from-to/input-from-to.component';
+import { AssetListComponent } from './assets/asset-list/asset-list.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { InputFromToComponent } from './search-property-bar/input-from-to/input-
     DatabaseComponent,
     AsssetCardComponent,
     DropDownAssetTypeComponent,
-    InputFromToComponent
+    InputFromToComponent,
+    AssetListComponent
   ],
   imports: [
     BrowserModule,

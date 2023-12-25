@@ -9,18 +9,29 @@ import { Asset } from '../data/asset.interfaces';
   styleUrls: ['./assset-card.component.scss']
 })
 export class AsssetCardComponent implements OnInit {
-  assets: Asset[] = [];
-  
+  @Input() appartment?: Asset;
+
+  // assets: Asset[] = [];
+  isShowSlideDownAppartmentDetails: boolean = false;
+
   constructor(private assetService: AssetService) {}
 
   ngOnInit(): void {
-    this.assets = this.assetService.getAsset();
+    // this.assets = this.assetService.getAsset();
 
   }
 
-  numberWithCommas(price: number) {
+  numberWithCommas(price?: number) {
+    if(price = 0){
+      return 0;
+    }
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+  }
+
+  onClickShowAppartment(){
+    this.isShowSlideDownAppartmentDetails = !this.isShowSlideDownAppartmentDetails;
+  }
+
 
 
 }

@@ -2,11 +2,144 @@
 
 
 <div class="all-appartment-container">
-  <div *ngFor="let item of assets">
-    <div class="external-container">
+  <!-- <div *ngFor="let item of assets"> -->
+    <div class="external-container" (click)="onClickShowAppartment()">
 
       <div>
-        <img src="../../assets/appartment pictures/WhatsApp Image 2023-12-19 at 17.07.49.jpeg" alt="appartment-pic">
+        <img class="profile-pic" src="../../assets/appartment pictures/WhatsApp Image 2023-12-19 at 17.07.49.jpeg" alt="appartment-pic">
+      </div>
+
+      <div class="property-details-container">
+        <div>
+          <p class="price-small-screen">{{numberWithCommas(appartment?.price)}} <span>&#8362;</span>
+          </p>
+          <p>{{appartment?.street}} {{appartment?.streetNumber}}</p>
+          <p class="p-addres">{{appartment?.type}},{{appartment?.neighborhood}},{{appartment?.city}}</p>
+        </div>
+
+        <hr class="custom-hr" />
+
+
+        <div class="button-container">
+          <div class="p-lable">
+            <p>{{appartment?.roomsNumber}}</p>
+            <label for="">חדרים</label>
+
+          </div>
+          <div class="p-lable">
+            <p>{{appartment?.floor}}</p>
+            <label for="">קומה</label>
+
+          </div>
+          <div class="p-lable">
+            <p>{{appartment?.totalSquareFootage}}</p>
+            <label for="">מ"ר</label>
+
+          </div>
+
+        </div>
+
+        <div>
+          <p class="price-big-screen">{{numberWithCommas(appartment?.price)}} <span>&#8362;</span>
+
+        </div>
+
+      </div>
+    </div>
+
+
+<div [ngClass]="{'slide-down-container': isShowSlideDownAppartmentDetails,
+               'slide-down-container-hide': !isShowSlideDownAppartmentDetails}">
+
+
+<h3>תיאור הנכס</h3>
+<p class="asset-description">{{appartment?.des}}</p>
+<div class="sign-container">
+  <div [ngClass]="{'internal-sign-container': appartment?.hasAirConditioning, 'internal-sign-container-not': !appartment?.hasAirConditioning}">
+    <img class="sign-img" src= "../../assets/appartment-sign/air-condition.png" alt="">
+    <p class="sign-p">מיזוג</p>
+  </div>
+
+  <div [ngClass]="{'internal-sign-container': appartment?.hasWindowBars, 'internal-sign-container-not': !appartment?.hasWindowBars}">
+    <img class="sign-img" src= "../../assets/appartment pictures/sign/soragim.png" alt="">
+    <p class="sign-p">סורגים</p>
+  </div>
+
+  <div [ngClass]="{'internal-sign-container': appartment?.hasElevator, 'internal-sign-container-not': !appartment?.hasElevator}">
+    <img class="sign-img" src= "../../assets/appartment-sign/lift.png" alt="">
+    <p class="sign-p">מעלית</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': appartment?.hasKosherKitchen, 'internal-sign-container-not': !appartment?.hasKosherKitchen}">
+    <img class="sign-img" src= "../../assets/appartment-sign/cosher.png" alt="">
+    <p class="sign-p">מטבח כשר</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': appartment?.hasSolarHeater, 'internal-sign-container-not': !appartment?.hasSolarHeater}">
+    <img class="sign-img" src= "../../assets/appartment-sign/dod-shemesh.png" alt="">
+    <p class="sign-p">דוד שמש</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': appartment?.hasAccessibilityForDisabled, 'internal-sign-container-not': !appartment?.hasAccessibilityForDisabled}">
+    <img class="sign-img" src= "../../assets/appartment-sign/disable.png" alt="">
+    <p class="sign-p">גישה לנכים</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': appartment?.renovated, 'internal-sign-container-not': !appartment?.renovated}">
+    <img class="sign-img" src= "../../assets/appartment-sign/renovated.png" alt="">
+    <p class="sign-p">משופצת</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': appartment?.hasMamad, 'internal-sign-container-not': !appartment?.hasMamad}">
+    <img class="sign-img" src= "../../assets/appartment-sign/mamad.png" alt="">
+    <p class="sign-p">ממ"ד</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': appartment?.hasStorage, 'internal-sign-container-not': !appartment?.hasStorage}">
+    <img class="sign-img" src= "../../assets/appartment-sign/storage.png" alt="">
+    <p class="sign-p">מחסן</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': appartment?.hasCentralAirConditioning, 'internal-sign-container-not': !appartment?.hasCentralAirConditioning}">
+    <img class="sign-img" src= "../../assets/appartment-sign/tadiran.png" alt="">
+    <p class="sign-p">מזגן תדיראן</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': appartment?.hasFurniture, 'internal-sign-container-not': !appartment?.hasFurniture}">
+    <img class="sign-img" src= "../../assets/appartment-sign/furnture.png" alt="">
+    <p class="sign-p">ריהוט</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': appartment?.rearAsset, 'internal-sign-container-not': !appartment?.rearAsset}">
+    <img class="sign-img" src= "../../assets/appartment-sign/empty.png" alt="">
+
+    <p class="sign-p">נכס עורפי</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': appartment?.isFlexible, 'internal-sign-container-not': !appartment?.isFlexible}">
+    <img class="sign-img" src= "../../assets/appartment-sign/empty.png" alt="">
+
+    <p class="sign-p">גמיש</p>
+  </div>
+</div>
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+  <!-- </div> -->
+
+
+
+
+
+<!--
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+<div class="all-appartment-container">
+  <div *ngFor="let item of assets">
+    <div class="external-container" (click)="onClickShowAppartment()">
+
+      <div>
+        <img class="profile-pic" src="../../assets/appartment pictures/WhatsApp Image 2023-12-19 at 17.07.49.jpeg" alt="appartment-pic">
       </div>
 
       <div class="property-details-container">
@@ -48,76 +181,106 @@
     </div>
 
 
-    <div class="slide-down-container">
-
-      <i class="fas fa-snowflake"></i>
-      <i class="fas fa-wind"></i>
-
-<!-- Parking -->
-<i class="fas fa-parking"></i>
-
-<!-- Elevator -->
-<i class="fas fa-sort-numeric-up"></i>
-
-<!-- Balcony -->
-<i class="fas fa-th-large"></i>
-
-<!-- Furniture -->
-<i class="fas fa-couch"></i>
-
-<!-- Accessibility -->
-<i class="fas fa-wheelchair"></i>
-
-<!-- Heating -->
-<i class="fas fa-thermometer-three-quarters"></i>
-
-<!-- Security -->
-<i class="fas fa-lock"></i>
-
-<!-- Pool -->
-<i class="fas fa-swimming-pool"></i>
-
-<!-- Pets Allowed -->
-<i class="fas fa-paw"></i>
+<div [ngClass]="{'slide-down-container': isShowSlideDownAppartmentDetails,
+               'slide-down-container-hide': !isShowSlideDownAppartmentDetails}">
 
 
+<h3>תיאור הנכס</h3>
+<p class="asset-description">{{item.des}}</p>
+<div class="sign-container">
+  <div [ngClass]="{'internal-sign-container': item.hasAirConditioning, 'internal-sign-container-not': !item.hasAirConditioning}">
+    <img class="sign-img" src= "../../assets/appartment-sign/air-condition.png" alt="">
+    <p class="sign-p">מיזוג</p>
+  </div>
+
+  <div [ngClass]="{'internal-sign-container': item.hasWindowBars, 'internal-sign-container-not': !item.hasWindowBars}">
+    <img class="sign-img" src= "../../assets/appartment pictures/sign/soragim.png" alt="">
+    <p class="sign-p">סורגים</p>
+  </div>
+
+  <div [ngClass]="{'internal-sign-container': item.hasElevator, 'internal-sign-container-not': !item.hasElevator}">
+    <img class="sign-img" src= "../../assets/appartment-sign/lift.png" alt="">
+    <p class="sign-p">מעלית</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': item.hasKosherKitchen, 'internal-sign-container-not': !item.hasKosherKitchen}">
+    <img class="sign-img" src= "../../assets/appartment-sign/cosher.png" alt="">
+    <p class="sign-p">מטבח כשר</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': item.hasSolarHeater, 'internal-sign-container-not': !item.hasSolarHeater}">
+    <img class="sign-img" src= "../../assets/appartment-sign/dod-shemesh.png" alt="">
+    <p class="sign-p">דוד שמש</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': item.hasAccessibilityForDisabled, 'internal-sign-container-not': !item.hasAccessibilityForDisabled}">
+    <img class="sign-img" src= "../../assets/appartment-sign/disable.png" alt="">
+    <p class="sign-p">גישה לנכים</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': item.renovated, 'internal-sign-container-not': !item.renovated}">
+    <img class="sign-img" src= "../../assets/appartment-sign/renovated.png" alt="">
+    <p class="sign-p">משופצת</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': item.hasMamad, 'internal-sign-container-not': !item.hasMamad}">
+    <img class="sign-img" src= "../../assets/appartment-sign/mamad.png" alt="">
+    <p class="sign-p">ממ"ד</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': item.hasStorage, 'internal-sign-container-not': !item.hasStorage}">
+    <img class="sign-img" src= "../../assets/appartment-sign/storage.png" alt="">
+    <p class="sign-p">מחסן</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': item.hasCentralAirConditioning, 'internal-sign-container-not': !item.hasCentralAirConditioning}">
+    <img class="sign-img" src= "../../assets/appartment-sign/tadiran.png" alt="">
+    <p class="sign-p">מזגן תדיראן</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': item.hasFurniture, 'internal-sign-container-not': !item.hasFurniture}">
+    <img class="sign-img" src= "../../assets/appartment-sign/furnture.png" alt="">
+    <p class="sign-p">ריהוט</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': item.rearAsset, 'internal-sign-container-not': !item.rearAsset}">
+    <img class="sign-img" src= "../../assets/appartment-sign/empty.png" alt="">
+
+    <p class="sign-p">נכס עורפי</p>
+  </div>
+  <div [ngClass]="{'internal-sign-container': item.isFlexible, 'internal-sign-container-not': !item.isFlexible}">
+    <img class="sign-img" src= "../../assets/appartment-sign/empty.png" alt="">
+
+    <p class="sign-p">גמיש</p>
+  </div>
+</div>
 
 
 
 
-      <p>ממ"ד: {{item.hasMamad?"כן" : "לא"}}</p>
-      <p>מצב הנכס: {{item.propertyCondition}}</p>
-      <p>תאריך כניסה: {{item.entryDate}}</p>
-      <p>גודל גינה: {{item.gardenSquare}}</p>
-      <p>גודל בנוי: {{item.builtSquare}}</p>
-      <p>חניות: {{item.parkingLots}}</p>
-      <p>מזגן תדיראן: {{item.hasCentralAirConditioning}}</p>
-      <p>דוד שמש: {{item.hasSolarHeater}}</p>
-      <p>מחסן: {{item.Id}}</p>
-      <p>גמיש בכניסה: {{item.Id}}</p>
-      <p>סורגים: {{item.Id}}</p>
-      <p>נגישות לנכים: {{item.hasAccessibilityForDisabled}}</p>
-      <p>מעלית: {{item.hasElevator}}</p>
 
-      <p>ממ"ד: {{item.hasMamad?"כן" : "לא"}}</p>
-      <p>מצב הנכס: {{item.propertyCondition}}</p>
-      <p>תאריך כניסה: {{item.entryDate}}</p>
-      <p>גודל גינה: {{item.gardenSquare}}</p>
-      <p>גודל בנוי: {{item.builtSquare}}</p>
-      <p>חניות: {{item.parkingLots}}</p>
-      <p>מזגן תדיראן: {{item.hasCentralAirConditioning}}</p>
-      <p>דוד שמש: {{item.hasSolarHeater}}</p>
-      <p>מחסן: {{item.Id}}</p>
-      <p>גמיש בכניסה: {{item.Id}}</p>
-      <p>סורגים: {{item.Id}}</p>
-      <p>נגישות לנכים: {{item.hasAccessibilityForDisabled}}</p>
-      <p>מעלית: {{item.hasElevator}}</p>
 
     </div>
   </div>
 
 
   </div>
+
+
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -176,3 +339,32 @@
 
 
  -->
+
+<!--
+ <p>ממ"ד: {{item.hasMamad?"כן" : "לא"}}</p>
+ <p>מצב הנכס: {{item.propertyCondition}}</p>
+ <p>תאריך כניסה: {{item.entryDate}}</p>
+ <p>גודל גינה: {{item.gardenSquare}}</p>
+ <p>גודל בנוי: {{item.builtSquare}}</p>
+ <p>חניות: {{item.parkingLots}}</p>
+ <p>מזגן תדיראן: {{item.hasCentralAirConditioning}}</p>
+ <p>דוד שמש: {{item.hasSolarHeater}}</p>
+ <p>מחסן: {{item.Id}}</p>
+ <p>גמיש בכניסה: {{item.Id}}</p>
+ <p>סורגים: {{item.Id}}</p>
+ <p>נגישות לנכים: {{item.hasAccessibilityForDisabled}}</p>
+ <p>מעלית: {{item.hasElevator}}</p>
+
+ <p>ממ"ד: {{item.hasMamad?"כן" : "לא"}}</p>
+ <p>מצב הנכס: {{item.propertyCondition}}</p>
+ <p>תאריך כניסה: {{item.entryDate}}</p>
+ <p>גודל גינה: {{item.gardenSquare}}</p>
+ <p>גודל בנוי: {{item.builtSquare}}</p>
+ <p>חניות: {{item.parkingLots}}</p>
+ <p>מזגן תדיראן: {{item.hasCentralAirConditioning}}</p>
+ <p>דוד שמש: {{item.hasSolarHeater}}</p>
+ <p>מחסן: {{item.Id}}</p>
+ <p>גמיש בכניסה: {{item.Id}}</p>
+ <p>סורגים: {{item.Id}}</p>
+ <p>נגישות לנכים: {{item.hasAccessibilityForDisabled}}</p>
+ <p>מעלית: {{item.hasElevator}}</p> -->
