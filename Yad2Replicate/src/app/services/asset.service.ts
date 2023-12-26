@@ -29,6 +29,7 @@ export class AssetService {
     builtSquare: 950, // Random number
     floorInTheBuilding: 5, // Random number
     parkingLots: 2, // Random number
+    terrace: 2,
 
     hasAirConditioning: true, // Random boolean
     hasSolarHeater: false, // Random boolean
@@ -64,6 +65,8 @@ export class AssetService {
     builtSquare: 950, // Random number
     floorInTheBuilding: 5, // Random number
     parkingLots: 2, // Random number
+    terrace: 2,
+
 
     hasAirConditioning: true, // Random boolean
     hasSolarHeater: false, // Random boolean
@@ -80,12 +83,12 @@ export class AssetService {
     },
     {
       Id: 3, // Random number
-      type:"בית פרטי",
+      type:"דירת גן",
     price: 1200000, // Random number
     street: 'פרחים', // Random string
     streetNumber: 45, // Random number
-    neighborhood: 'ראשונים', // Random string
-    city: 'נתניה', // Random string
+    neighborhood: 'רמת בית הכרם', // Random string
+    city: 'באר שבע', // Random string
     floor: 3, // Random number
     roomsNumber: 5,
 
@@ -99,6 +102,8 @@ export class AssetService {
     builtSquare: 950, // Random number
     floorInTheBuilding: 5, // Random number
     parkingLots: 2, // Random number
+    terrace: 2,
+
 
     hasAirConditioning: true, // Random boolean
     hasSolarHeater: false, // Random boolean
@@ -117,9 +122,9 @@ export class AssetService {
       Id: 4, // Random number
       type:"בית פרטי",
     price: 1200000, // Random number
-    street: 'פרחים', // Random string
+    street: 'הגוש הגדול', // Random string
     streetNumber: 45, // Random number
-    neighborhood: 'ראשונים', // Random string
+    neighborhood: 'רמת אביב ג', // Random string
     city: 'נתניה', // Random string
     floor: 3, // Random number
     roomsNumber: 5,
@@ -134,6 +139,8 @@ export class AssetService {
     builtSquare: 950, // Random number
     floorInTheBuilding: 5, // Random number
     parkingLots: 2, // Random number
+    terrace: 2,
+
 
     hasAirConditioning: true, // Random boolean
     hasSolarHeater: false, // Random boolean
@@ -150,7 +157,7 @@ export class AssetService {
     },
     {
       Id: 5, // Random number
-      type:"בית פרטי",
+      type:"דירה",
     price: 1200000, // Random number
     street: 'פרחים', // Random string
     streetNumber: 45, // Random number
@@ -169,6 +176,8 @@ export class AssetService {
     builtSquare: 950, // Random number
     floorInTheBuilding: 5, // Random number
     parkingLots: 2, // Random number
+    terrace: 2,
+
 
     hasAirConditioning: true, // Random boolean
     hasSolarHeater: false, // Random boolean
@@ -185,12 +194,12 @@ export class AssetService {
     },
     {
       Id: 6, // Random number
-      type:"בית פרטי",
+      type:"פנטהוז",
     price: 1200000, // Random number
-    street: 'פרחים', // Random string
+    street: 'פרחים ושושנים', // Random string
     streetNumber: 45, // Random number
-    neighborhood: 'ראשונים', // Random string
-    city: 'נתניה', // Random string
+    neighborhood: 'צהלה ג', // Random string
+    city: 'קרית אתא', // Random string
     floor: 3, // Random number
     roomsNumber: 5,
 
@@ -204,6 +213,8 @@ export class AssetService {
     builtSquare: 950, // Random number
     floorInTheBuilding: 5, // Random number
     parkingLots: 2, // Random number
+    terrace: 2,
+
 
     hasAirConditioning: true, // Random boolean
     hasSolarHeater: false, // Random boolean
@@ -239,6 +250,8 @@ export class AssetService {
     builtSquare: 950, // Random number
     floorInTheBuilding: 5, // Random number
     parkingLots: 2, // Random number
+    terrace: 2,
+
 
     hasAirConditioning: true, // Random boolean
     hasSolarHeater: false, // Random boolean

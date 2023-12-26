@@ -18,6 +18,7 @@
         builtSquare: number;
         floorInTheBuilding: number; // יש כפילות
         parkingLots: number;
+        terrace: number;
 
         hasAirConditioning: boolean;
         hasSolarHeater: boolean;

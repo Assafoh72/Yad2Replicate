@@ -6,19 +6,22 @@
     <div class="external-container" (click)="onClickShowAppartment()">
 
       <div>
-        <img class="profile-pic" src="../../assets/appartment pictures/WhatsApp Image 2023-12-19 at 17.07.49.jpeg" alt="appartment-pic">
+        <img class="profile-pic" [src]="'../../assets/appartment pictures/' + (appartment?.Id) + '.png'" alt="appartment-pic" alt="appartment-pic">
       </div>
 
       <div class="property-details-container">
-        <div>
+        <div class="addres-container">
           <p class="price-small-screen">{{numberWithCommas(appartment?.price)}} <span>&#8362;</span>
           </p>
-          <p>{{appartment?.street}} {{appartment?.streetNumber}}</p>
-          <p class="p-addres">{{appartment?.type}},{{appartment?.neighborhood}},{{appartment?.city}}</p>
+          <p class="p-addres">{{appartment?.street}} {{appartment?.streetNumber}}</p>
+          <p>{{appartment?.type}},{{appartment?.neighborhood}},{{appartment?.city}}</p>
         </div>
 
-        <hr class="custom-hr" />
 
+        <hr class="custom-hr" />
+        <div>
+          <hr class="custom-line" />
+        </div>
 
         <div class="button-container">
           <div class="p-lable">
@@ -38,8 +41,12 @@
           </div>
 
         </div>
-
         <div>
+          <hr class="custom-line" />
+
+        </div>
+
+        <div class= "container-price-big-screen">
           <p class="price-big-screen">{{numberWithCommas(appartment?.price)}} <span>&#8362;</span>
 
         </div>
@@ -51,6 +58,19 @@
 <div [ngClass]="{'slide-down-container': isShowSlideDownAppartmentDetails,
                'slide-down-container-hide': !isShowSlideDownAppartmentDetails}">
 
+<div class="asset-details-container">
+  <div>
+    <p>מצב הנכס  <span>{{appartment?.propertyCondition}}</span></p>
+    <p>קומות בבניין  <span>{{appartment?.floorInTheBuilding}}</span></p>
+    <p>חניות  <span>{{appartment?.parkingLots}}</span></p>
+  </div>
+  <div>
+    <p>תאריך כניסה  <span>{{appartment?.entryDate}}</span></p>
+  <p>מרפסות  <span>{{appartment?.terrace}}</span></p>
+  </div>
+
+
+</div>
 
 <h3>תיאור הנכס</h3>
 <p class="asset-description">{{appartment?.des}}</p>

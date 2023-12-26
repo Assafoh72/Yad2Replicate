@@ -12,10 +12,10 @@ export class AssetListComponent implements OnInit {
 
 
   constructor (private assetService: AssetService){}
-  
+
   ngOnInit(): void {
     this.assets = this.assetService.getAsset()
-    console.log(this.assets);
+    console.log("assat ", this.assets);
 
   }
 
